@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Modern Business - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">EBI Calculator</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact</a>
+          </li>
+         
+           
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+     <h1 class="mt-4 mb-3">Dashboard
+      <small>Subheading</small>
+    </h1>
+
+   <canvas id="lineChart"></canvas>
+   
+   
+   <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Line Series</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Polar Series</h3>
+                </div>
+                <div id="chart2" class="panel-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Area Series</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="chart3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>StepLine Series</h3>
+                </div>
+                <div id="chart4" class="panel-body">
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+
+<!-- you need to include the shieldui css and js assets in order for the charts to work -->
+<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        var data1 = [12, 3, 4, 2, 12, 3, 4, 17, 22, 34, 54, 67];
+        var data2 = [3, 9, 12, 14, 22, 32, 45, 12, 67, 45, 55, 7];
+        var data3 = [23, 19, 11, 134, 242, 352, 435, 22, 637, 445, 555, 57];
+        var data4 = [13, 19, 112, 114, 212, 332, 435, 132, 67, 45, 55, 7];
+            
+        $("#chart1").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+                    text: "Break-Down for selected quarter"
+                }
+            },
+            dataSeries: [{
+                seriesType: "line",
+                data: data1
+            }]
+        });
+
+        $("#chart2").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+                    text: "Break-Down for selected quarter"
+                }
+            },
+            dataSeries: [{
+                seriesType: "polarbar",
+                data: data2
+            }]
+        });
+
+        $("#chart3").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+                    text: "Break-Down for selected quarter"
+                }
+            },
+            dataSeries: [{
+                seriesType: "area",
+                data: data3
+            }]
+        });
+
+        $("#chart4").shieldChart({
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            axisY: {
+                title: {
+                    text: "Break-Down for selected quarter"
+                }
+            },
+            dataSeries: [{
+                seriesType: "stepline",
+                data: data4
+            }]
+        });
+    });
+</script>
+   
+
+    <div class="row">
+      <div class="col-lg-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="http://www.childcareonline.ie/images/download.jpg" height="300" width="300" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="record.html">Records</a>
+            </h4>
+            <p class="card-text">Recordkeeping is the process of recording transactions and events in an accounting system. 
+			Since the principles of accounting rely on accurate and 
+			thorough records, record keeping is the foundation accounting.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="https://searchengineland.com/figz/wp-content/seloads/2018/07/attribution-conversion-analytics-ss-1920-600x338.jpg" height="300" width="300" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">Analytics</a>
+            </h4>
+            <p class="card-text">Analytics is the discovery, interpretation, and communication
+			of meaningful patterns in data. It also entails applying data patterns towards effective
+			decision making. In other words, analytics can be understood as the connective tissue between
+			data and effective decision making within an organization. Especially valuable in areas rich with
+			recorded information, analytics relies on the simultaneous application of statistics, computer programming
+			and operations research to quantify performance.</p>
+          </div>
+        </div>
+      </div>
+  
+    
+   
+    </div>
+    <!-- /.row -->
+
+    <!-- Pagination -->
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">&copy; Sam Punch 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
